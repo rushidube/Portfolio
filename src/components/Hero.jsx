@@ -81,7 +81,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Rushikesh_Resume.pdf"
+              href="/Rushikesh_Dube.pdf"
               className="btn btn-primary"
               download
             >

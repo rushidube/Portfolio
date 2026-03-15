@@ -9,12 +9,12 @@ export default function Projects() {
       live: "#",
     },
     {
-      title: "Responsive Landing Page",
+      title: "AQI Data Analytics Dashboard",
       description:
-        "Designed and developed a responsive landing page focusing on layout structure, typography hierarchy, and cross-device compatibility.",
+        "Designed and deployed an interactive Streamlit dashboard for analyzing Air Quality Index (AQI) data. Used Python, Pandas, and Plotly to perform data transformation and visualization.",
       tech: ["HTML", "CSS"],
-      github: "https://github.com/rushidube",
-      live: "#",
+      github: "https://github.com/rushidube/AQI-Dashboard",
+      live: "https://rushidube-aqi-dashboard.streamlit.app/",
     },
    {
   title: "Simon-Memory-Game",
