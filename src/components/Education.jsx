@@ -31,7 +31,7 @@ export default function Education() {
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <span className="timeline-year">2021 – 2022</span>
-              <h3>Higher Secondary [78.83%]</h3>
+              <h3>Higher Secondary</h3>
               <p className="timeline-place">
                 Niwasi Highschool Barashiv  
               </p>
@@ -45,7 +45,7 @@ export default function Education() {
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <span className="timeline-year">2020-2021</span>
-              <h3>Secondary School [88.40%] </h3>
+              <h3>Secondary School</h3>
               <p className="timeline-place">
                 Niwasi Highschool Barashiv
               </p>
