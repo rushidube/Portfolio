@@ -4,7 +4,84 @@
     <meta charset="UTF-8" />
    <link rel="icon" type="image/png" href="/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Rushikesh Dube</title>
+    <meta name="theme-color" content="#05060b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f5f8fc" media="(prefers-color-scheme: light)" />
+    <title>Rushikesh Dube | Data Analyst &amp; Power BI Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Rushikesh Dube, a Data Analyst and Power BI Developer specializing in SQL, Python and interactive dashboards that turn raw data into decision-ready insight."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rushikesh Dube" />
+    <meta property="og:url" content="https://portfolio-rushi-dube.vercel.app/" />
+    <meta property="og:title" content="Rushikesh Dube | Data Analyst &amp; Power BI Developer" />
+    <meta
+      property="og:description"
+      content="Data Analyst and Power BI Developer specializing in SQL, Python and interactive dashboards that turn raw data into decision-ready insight."
+    />
+    <meta property="og:image" content="https://portfolio-rushi-dube.vercel.app/myphoto.jpeg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Rushikesh Dube | Data Analyst &amp; Power BI Developer" />
+    <meta
+      name="twitter:description"
+      content="Data Analyst and Power BI Developer specializing in SQL, Python and interactive dashboards that turn raw data into decision-ready insight."
+    />
+    <meta name="twitter:image" content="https://portfolio-rushi-dube.vercel.app/myphoto.jpeg" />
+
+    <!--
+      Type system: three self-hosted variable fonts, one file each, covering
+      the full weight axis (100-900) so no extra request is ever spent on a
+      new font-weight - a single request per family instead of one per
+      static weight. Shipped from /public/fonts (same origin as the page)
+      rather than Google Fonts' CDN, which trades away a DNS + TLS
+      handshake to a third-party origin for a file the browser can cache
+      indefinitely under our own control.
+
+      Preloaded because these are the fonts the very first paint needs -
+      Inter for the nav/hero body copy, Plus Jakarta Sans for the H1, and
+      JetBrains Mono for the hero's tech-stack pills, all above the fold.
+      `@font-face` itself lives in index.css with `font-display: swap`, so
+      even before these finish loading the fallback stack paints instantly -
+      preload only shortens how long that fallback stays on screen.
+    -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-variable.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-variable.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrains-mono-variable.woff2" crossorigin />
+    <!--
+      The hero avatar is the page's LCP element, but it only enters the DOM once
+      React renders - the browser's preload scanner can't see it in the raw HTML
+      the way it would a server-rendered <img>. This hint starts the fetch in
+      parallel with JS parsing/execution instead of waiting for React to mount.
+    -->
+    <link rel="preload" as="image" href="/myphoto.jpeg" fetchpriority="high" />
+    <!--
+      Runs synchronously during head parsing, before the browser paints anything
+      and long before React mounts. This is the only way to avoid a flash of the
+      wrong palette: any theme applied from a component runs after first paint.
+
+      The storage key and values must stay in sync with src/lib/theme.tsx.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          // Storage blocked, or matchMedia unavailable - the stylesheet's own
+          // defaults take over from here.
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
